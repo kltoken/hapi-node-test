@@ -11,7 +11,8 @@ const config = {
   ...configs[env],
   define: {
     underscored: true
-  }
+  },
+  // timezone : '+08:00' // 时区设置
 };
 const db = {};
 
@@ -40,5 +41,5 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-console.log(db)
+// console.log(db)
 module.exports = db;
